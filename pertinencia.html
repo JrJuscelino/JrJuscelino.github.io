@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="pertinencia.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+    <body>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + 'A'; arg=arg + 'A'">A</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + 'B'; arg=arg + 'B'">B</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + 'C'; arg=arg + 'C'">C</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + 'D'; arg=arg + 'D'">D</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + 'E'; arg=arg + 'E'">E</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + 'F'; arg=arg + 'F'">F</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + '('; arg=arg + '('">(</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + ')'; arg=arg + ')'">)</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + '&cap;'; arg=arg + '&' + 'cap;'">&cap;</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + '&cup;'; arg=arg + '&' +'cup;'">&cup;</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + '&minus;'; arg=arg + '&' + 'minus;'">&minus;</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value + '\''; arg=arg + '\''">'</div>
+        <div class="button" onclick = "getElementById('expression').value = getElementById('expression').value.slice(0, -1); arg.slice(0,-1)"><-</div>
+        <form onsubmit = "document.getElementsByClassName('table')[0].innerHTML =''; event.preventDefault(); Expression(arg); console.log(arg)">
+            <input type="submit" class="button" value="S">
+            <input type="text" placeholder="Use o teclado virtual acima. Use \' para complementar. Ex A\'. Use <- para apagar. Use S para enviar." readonly=true id="expression"></input>
+        </form>
+        <h1 class="title"></h1>
+        <section class="table container row">
+        </section>
+        <script type="text/javascript" src="pertinencia.js"></script>
+    </body>
+</html>
